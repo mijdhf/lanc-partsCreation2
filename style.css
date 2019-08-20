@@ -58,31 +58,42 @@ html body section { background: #fff; padding: 36px; margin-bottom: 10px; }
 /*---------------*/
 /* Company */
 /*---------------*/
-.company { display: flex; max-width: 980px; }
-.company__left tr th { margin-right: 38px; }
+.company { display: flex; }
+.companyLeftcompanyRowhead { width: 68px; padding-right: 38px; }
+
+/*------*/
+/* Mediator */
+/*------*/
+.mediator { width: 575px; }
+@media (max-width: 560px) { .mediator { width: 100%; } }
+.mediatorWrap { display: flex; }
+@media (max-width: 560px) { .mediatorWrap { flex-direction: column; justify-content: center; align-items: center; padding-left: 7%; padding-right: 7%; } }
+.mediator__img { width: 575px; height: 185px; object-fit: contain; margin-bottom: 29px; }
+@media (max-width: 560px) { .mediator__img { width: 100%; height: auto; margin-bottom: 15px; } }
+.mediator__img2 { max-width: 100%; margin: auto; text-align: center; }
+@media (max-width: 560px) { .mediator__img2 { width: 100%; height: auto; margin-bottom: 15px; } }
+.mediator__title { font-size: 0; margin-bottom: 15px; }
+@media (max-width: 560px) { .mediator__title { margin-bottom: 15px; } }
+.mediator__titleSub { vertical-align: middle; font-family: "Noto Serif JP", serif; font-weight: bold; font-size: 14px; text-align: center; color: #005aa0; margin-bottom: 6px; }
+@media (max-width: 560px) { .mediator__titleSub { font-size: 19px; } }
+.mediator__titleMain { vertical-align: middle; font-family: "Noto Serif JP", serif; font-weight: normal; font-size: 26px; letter-spacing: 0.2em; text-align: center; color: #005aa0; }
+@media (max-width: 560px) { .mediator__titleMain { font-size: 17px; } }
+.mediator__content { font-family: "Noto Serif JP", serif; font-size: 14px; letter-spacing: 0.05em; line-height: 1.75; text-align: center; color: #454545; }
+@media (max-width: 560px) { .mediator__content { font-size: 13px; } }
 
 /*---------------*/
 /* Building List */
 /*---------------*/
 .buildingList { display: inline-block; max-width: 421px; }
-@media (max-width: 560px) { .buildingList { padding-left: 7%; padding-right: 7%; } }
-.buildingList__img { position: relative; box-sizing: border-box; margin-bottom: 19px; }
-.buildingList__img img { width: 100%; }
-@media (max-width: 560px) { .buildingList__img { margin-bottom: 12px; } }
-.buildingList__img::after { position: absolute; content: "NEW"; top: 0px; left: 0px; padding: 4px 4px 4px 6px; background-color: #be2400; font-family: "Lato", sans-serif; font-weight: bold; font-size: 13px; letter-spacing: 2px; color: #fff; }
-@media (max-width: 560px) { .buildingList__img::after { font-size: 12px; padding: 4px 5px 3px; } }
-@media (max-width: 560px) { .buildingList__info { margin-bottom: 15px; } }
-.buildingList__infoCat { font-family: "Lato", sans-serif; font-weight: bold; font-size: 13px; letter-spacing: 0.2em; text-align: left; color: #454545; margin-right: 31.3px; }
-@media (max-width: 560px) { .buildingList__infoCat { font-size: 14px; margin-right: 14px; } }
-.buildingList__infoAddress { font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-size: 12px; letter-spacing: 0.05em; text-align: left; color: #454545; margin-right: 16.7px; }
-@media (max-width: 560px) { .buildingList__infoAddress { font-size: 12px; margin-right: 12px; } }
-.buildingList__infoPrice { font-family: "Lato", sans-serif; font-size: 14px; letter-spacing: .4px; text-align: left; color: #454545; }
-@media (max-width: 560px) { .buildingList__infoPrice { font-size: 14px; } }
-.buildingList__detail { display: none; }
-@media (max-width: 560px) { .buildingList__detail { display: block; }
-  .buildingList__detailName { display: block; font-family: "Noto Serif JP", serif; font-size: 16px; letter-spacing: 0.05em; color: #454545; margin-bottom: 9px; }
-  .buildingList__detailSubName { display: block; font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.05em; color: #454545; margin-bottom: 19px; }
-  .buildingList__detailLink { display: inline-block; font-family: "Lato", sans-serif; text-decoration: none; font-weight: bold; color: #005aa0; font-size: 10px; padding: 4px 0; letter-spacing: 0.2em; border-bottom: 1px solid #005aa0; } }
+.buildingList__infoCat { font-family: "Lato", sans-serif; font-weight: bold; font-size: 18px; letter-spacing: 0.2em; text-align: left; color: #454545; margin-right: 26.4px; margin-bottom: 15.2px; }
+.buildingList__infoNew { padding: 4px 4px 4px 6px; background-color: #be2400; font-family: "Lato", sans-serif; font-weight: bold; font-size: 13px; letter-spacing: 2px; color: #fff; }
+.buildingList__infoMember { padding: 4px 4px 4px 6px; background-color: #454545; font-family: "Lato", sans-serif; font-weight: bold; font-size: 13px; letter-spacing: 2px; color: #fff; }
+.buildingList__detailName { display: block; font-family: "Noto Serif JP", serif; font-size: 22.98px; letter-spacing: 0.05em; color: #454545; margin-top: 17.5px; margin-bottom: 12.5px; }
+.buildingList__detailSubName { font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.05em; color: #454545; }
+.buildingList__detailPrice { font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-size: 26.93px; font-weight: bold; letter-spacing: 0.05em; text-align: left; color: #454545; margin-top: 26.8px; margin-bottom: 12.2px; }
+.buildingList__detailRate { font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-size: 12px; letter-spacing: 0.05em; text-align: left; color: #454545; margin-bottom: 38px; }
+.buildingList__detail__img { margin-bottom: 19px; }
+.buildingList__detail__img img { width: 100%; }
 
 /*------*/
 /* Flow */
