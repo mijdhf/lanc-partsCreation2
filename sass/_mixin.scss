@@ -1,0 +1,67 @@
+/* Media Query 
+---------------------------------------------------*/
+@mixin media($breakpoint) {
+    @if $breakpoint == pc {
+        @media only screen and (min-width:$main-width + 1px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == tb {
+        @media only screen and (max-width:$ipad11) {
+            @content;
+        }
+    }
+    @else if $breakpoint == tb12 {
+      @media only screen and (max-width:$ipad12) {
+        @content;
+      }
+    }
+    @else if $breakpoint == sp {
+        @media only screen and (max-width:$ipad - 1px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == se {
+        @media only screen and (max-width:$se) {
+            @content;
+        }
+    }
+}
+
+
+/* Flex Box
+---------------------------------------------------*/
+@mixin flex($type: start,$align: stretch,$w: auto,$h: auto) {
+    @if $type == bet {
+        justify-content: space-between;
+    }
+    @else if $type == around {
+        justify-content: space-around;
+    }    
+    @else if $type == start {
+        justify-content: flex-start;
+    }  
+    @else if $type == end {
+        justify-content: flex-end;
+    }
+    @else if $type == center {
+        justify-content: center;
+    }
+    
+    @if $align == start {
+        align-items: flex-start;
+    }
+    @else if $align == center {
+        align-items: center;
+    }    
+    @else if $align == end {
+        align-items: flex-end;
+    }  
+    @else if $align == base {
+        align-items: baseline;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    width: $w;
+    height: $h;
+}
