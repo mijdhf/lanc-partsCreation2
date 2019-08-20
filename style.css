@@ -57,6 +57,14 @@ a:hover { opacity: .6; }
 ---------------------------------------------------*/
 /* 2
 ---------------------------------------------------*/
+.about { display: flex; }
+@media only screen and (max-width: 767px) { .about { display: block; } }
+.about-left { margin-right: 79px; }
+.about__row { display: flex; width: 450px; font-size: 13px; line-height: 24px; font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; padding: 12px 0; }
+.about__row:not(:last-child) { border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+.about__row-head { min-width: 6em; font-weight: bold; }
+.about__row-info { margin-left: 19px; }
+
 /* 3
 ---------------------------------------------------*/
 /* 4
