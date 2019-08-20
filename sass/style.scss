@@ -151,7 +151,7 @@ html{
     display: flex;
 
   &Left{
-    &companyRow{
+    &__Row{
       &head{
       width: 68px;
       padding-right: 38px;
@@ -379,12 +379,14 @@ html{
 .flow{
   width: 330px;
 
+
   @include sp{
     width: 100%;
   }
 
   &Wrap{
     display: flex;
+    justify-content: center;
 
     @include sp{
       flex-direction: column;

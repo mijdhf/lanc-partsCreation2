@@ -59,7 +59,7 @@ html body section { background: #fff; padding: 36px; margin-bottom: 10px; }
 /* Company */
 /*---------------*/
 .company { display: flex; }
-.companyLeftcompanyRowhead { width: 68px; padding-right: 38px; }
+.companyLeft__Rowhead { width: 68px; padding-right: 38px; }
 
 /*------*/
 /* Mediator */
@@ -100,7 +100,7 @@ html body section { background: #fff; padding: 36px; margin-bottom: 10px; }
 /*------*/
 .flow { width: 330px; }
 @media (max-width: 560px) { .flow { width: 100%; } }
-.flowWrap { display: flex; }
+.flowWrap { display: flex; justify-content: center; }
 @media (max-width: 560px) { .flowWrap { flex-direction: column; justify-content: center; align-items: center; padding-left: 7%; padding-right: 7%; } }
 .flow__img { width: 330px; height: 192px; object-fit: contain; margin-bottom: 11px; }
 @media (max-width: 560px) { .flow__img { width: 100%; height: auto; margin-bottom: 15px; } }
