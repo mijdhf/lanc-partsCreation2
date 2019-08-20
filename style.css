@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variable Size
 -----------------------------------------*/
 /* Variable Color
@@ -62,6 +63,16 @@ a:hover { opacity: .6; }
 ---------------------------------------------------*/
 /* 5
 ---------------------------------------------------*/
+.flow { justify-content: center; display: flex; flex-wrap: wrap; width: auto; height: auto; max-width: 1400px; margin: auto; }
+.flow-step { width: 330px; margin: 0 53px 30px; position: relative; }
+@media only screen and (max-width: 767px) { .flow-step { margin: 0 20px 20px; } }
+.flow-step:not(:first-child):before { content: url("./assets/img/arrow.png"); display: block; position: absolute; top: 90px; left: -56px; width: 13px; height: auto; }
+@media only screen and (max-width: 767px) { .flow-step:not(:first-child):before { position: relative; margin: 0 auto 20px; top: unset; left: unset; transform: rotate(90deg); } }
+.flow-step img { width: 100%; margin-bottom: 13px; }
+.flow-step__title { color: #005aa0; font-family: 'Noto Serif JP'; margin-bottom: 16px; }
+.flow-step__title span { font-weight: bold; font-size: 22px; font-family: 'Lato'; margin-right: 14px; }
+.flow-step p { font-size: 13px; line-height: 24px; font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; }
+
 /* 6
 ---------------------------------------------------*/
 /* 7
