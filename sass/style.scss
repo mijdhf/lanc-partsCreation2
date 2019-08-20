@@ -1,0 +1,876 @@
+/*
+Project Name: パーツ制作
+*/
+
+@import "compass";
+@include global-reset;
+
+/*-----------*/
+/* Variables */
+/*-----------*/
+
+// Color
+$white: #f4f4f4;
+$black:  #454545;
+$light-gray: #8c8c8c;
+$blue: #005aa0;
+
+
+// Font
+$yu-gothic: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+$hiragino-gothic: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+$lato: 'Lato', sans-serif;
+$noto-serif: 'Noto Serif JP', serif;
+
+/*-------*/
+/* Mixin */
+/*-------*/
+
+// Media Query
+$sp: 560px;
+
+@mixin sp{
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+/*------*/
+/* Base */
+/*------*/
+html{
+
+  body{
+    -webkit-font-smoothing: antialiased;
+    background: $light-gray;
+
+    section{
+      background: #fff;
+      padding: 36px;
+      margin-bottom: 10px;
+
+      @include sp{
+        padding: 15px 0;
+        margin-bottom: 15px;
+      }
+
+    }
+
+  }
+
+}
+
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.yu-gothic{font-family: $yu-gothic;}
+.hiragino-gothic{font-family: $hiragino-gothic;}
+.lato{font-family: $lato;}
+.noto-serif{font-family: $noto-serif;}
+
+@include sp{
+  .sp-off{display: none;}
+  .spCenter{text-align: center;}
+}
+
+
+
+/*-----*/
+/* Article */
+/*-----*/
+.article{
+
+  @include sp{
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  &__line1{
+    display: flex;
+    border-bottom: 1px  solid rgba(100,100,100,0.2);
+
+    &Date{
+      font-family: $yu-gothic;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: $black;
+      margin-right: 54px;
+    }
+
+    &Text{
+      font-family: $yu-gothic;
+      font-weight: Medium;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-align: left;
+      color: $black;
+      width: 100%;
+      padding-bottom: 13px;
+    }
+  }
+
+  &__line2{
+    display: flex;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px  solid rgba(100,100,100,0.2);
+
+    &Date{
+      font-family: $yu-gothic;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: $black;
+      margin-right: 63px;
+    }
+
+    &Text{
+      font-family: $yu-gothic;
+      font-weight: Medium;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-align: left;
+      color: $black;
+      width: 100%;
+          }
+
+  }
+
+}
+
+
+/*---------------*/
+/* Company */
+/*---------------*/
+
+.company{
+  display: flex;
+  max-width: 980px;
+
+  &__left{
+    tr th{
+      margin-right: 38px;
+    }
+
+  }
+
+}
+
+/*---------------*/
+/* Building List */
+/*---------------*/
+.buildingList{
+  display: inline-block;
+  max-width: 421px;
+
+  @include sp{
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  &__img{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 19px;
+
+    img{
+      width: 100%;
+    }
+
+    @include sp{
+      margin-bottom: 12px;
+    }
+
+    &::after{
+      position: absolute;
+      content: "NEW";
+      top: 0px;
+      left: 0px;
+      padding: 4px 4px 4px 6px;
+      background-color: #be2400;
+      font-family: $lato;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #fff;
+
+      @include sp{
+        font-size: 12px;
+        padding: 4px 5px 3px;
+      }
+
+    }
+
+  }
+
+  &__info{
+
+    @include sp{
+      margin-bottom: 15px;
+    }
+
+    &Cat{
+      font-family: $lato;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-align: left;
+      color: $black;
+      margin-right: 31.3px;
+
+      @include sp{
+        font-size: 14px;
+        margin-right: 14px;
+      }
+
+    }
+
+    &Address{
+      font-family: $yu-gothic;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-align: left;
+      color: $black;
+      margin-right: 16.7px;
+
+      @include sp{
+        font-size: 12px;
+        margin-right: 12px;
+      }
+
+    }
+
+    &Price{
+      font-family: $lato;
+      font-size: 14px;
+      letter-spacing: .4px;
+      text-align: left;
+      color: $black;
+
+      @include sp{
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+  &__detail{
+    display: none;
+
+    @include sp{
+      display: block;
+
+      &Name{
+        display: block;
+        font-family: $noto-serif;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        color: $black;
+        margin-bottom: 9px;
+      }
+
+      &SubName{
+        display: block;
+        font-family: $yu-gothic;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: $black;
+        margin-bottom: 19px;
+      }
+
+      &Link{
+        display: inline-block;
+        font-family: $lato;
+        text-decoration: none;
+        font-weight: bold;
+        color: $blue;
+        font-size: 10px;
+        padding: 4px 0;
+        letter-spacing: 0.2em;
+        border-bottom: 1px solid $blue;
+      }
+
+    }
+
+  }
+
+}
+
+
+/*------*/
+/* Flow */
+/*------*/
+.flow{
+  width: 330px;
+
+  @include sp{
+    width: 100%;
+  }
+
+  &Wrap{
+    display: flex;
+
+    @include sp{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  }
+
+  &__img{
+    width: 330px;
+    height: 192px;
+    object-fit: contain;
+    margin-bottom: 11px;
+
+    @include sp{
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__title{
+    font-size: 0;
+    margin-bottom: 10px;
+
+    @include sp{
+      margin-bottom: 15px;
+    }
+
+    &Number{
+      vertical-align: middle;
+      font-family: $lato;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: left;
+      margin-right: 16px;
+      color: $blue;
+
+      @include sp{
+        font-size: 19px;
+        margin-right: 14px;
+      }
+    }
+
+    &Text{
+      vertical-align: middle;
+      font-family: $noto-serif;
+      font-weight: normal;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-align: left;
+      color: $blue;
+
+      @include sp{
+        font-size: 17px;
+      }
+
+    }
+
+  }
+
+  &__content{
+    font-family: $yu-gothic;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    line-height: 1.75;
+    text-align: left;
+    color: $black;
+
+    @include sp{
+      font-size: 13px;
+    }
+
+  }
+
+  &__arrow{
+    margin-left: 46px;
+    margin-right: 46px;
+    margin-top: 90px;
+
+    @include sp{
+      transform: rotate(90deg);
+      margin: 18px auto 30px;
+    }
+
+  }
+
+}
+
+
+/*--------*/
+/* footer */
+/*--------*/
+.footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 45px 75px;
+  background: $white;
+
+  @include sp{
+    padding: 7%;
+  }
+
+  &__btn{
+
+    &-wrap{
+      font-size: 0;
+
+      @include sp{
+        display: flex;
+        width: 100%;
+        margin-bottom: 38px;
+      }
+
+    }
+
+    &:first-child{
+      margin-right: 43px;
+
+      @include sp{
+        margin-right: 9px;
+      }
+    }
+
+    display: inline-block;
+    text-align: center;
+    background: $black;
+    border: 1px solid $black;
+    color: $white;
+    text-decoration: none;
+    padding: 34px 56px;
+    transition: background .2s, color .2s;
+
+    @include sp{
+      padding: 16px;
+    }
+
+    &:hover{
+      background: $white;
+      color: $black;
+    }
+
+    &--wide{
+      padding: 34px 86px;
+
+      @include sp{
+        padding: 16px;
+        flex: 1;
+      }
+
+    }
+
+    &--white{
+      background: $white;
+      color: $black;
+
+      &:hover{
+        background: $black;
+        color: $white;
+      }
+
+    }
+
+    &-text{
+
+      &--en, &--ja{
+        display: block;
+      }
+
+      &--en{
+        font-size: 20px;
+        font-family: $lato;
+        font-weight: bold;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+
+        @include sp{
+          font-size: 14px;
+          letter-spacing: 4px;
+          margin-bottom: 6px;
+          margin-right: -3px;
+        }
+
+      }
+
+      &--ja{
+        font-size: 13px;
+        font-family: $noto-serif;
+        letter-spacing: 5px;
+
+        @include sp{
+          font-size: 14px;
+          letter-spacing: 3px;
+          white-space: nowrap;
+        }
+
+      }
+    }
+  }
+
+  &__about{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+
+    @include sp{
+      justify-content: space-between;
+    }
+
+    &-left{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: right;
+      margin-right: 40px;
+
+      @include sp{
+        text-align: left;
+        margin-right: 10px;
+      }
+
+    }
+
+    &-right{
+      @include sp{
+        img{
+          width: 53px;
+        }
+      }
+    }
+
+    &-info{
+      font-size: 12px;
+      font-family: $yu-gothic;
+
+      @include sp{
+        font-size: 10px;
+      }
+
+      p:not(:last-child){
+        margin-bottom: 11px;
+
+        @include sp{
+          margin-bottom: 10px;
+        }
+
+      }
+    }
+
+    &-sns{
+      font-size: 0;
+
+      a:not(:last-child){
+        margin-right: 14px;
+
+        @include sp{
+          margin-right: 10px;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+/*----------*/
+/* Headline */
+/*----------*/
+.headLine{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    font-family: $lato;
+    font-weight:bold;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    color: $black;
+    margin-bottom: 12px;
+  }
+
+  &__subTitle{
+    font-family: $noto-serif;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: $black;
+  }
+
+}
+
+
+/*------*/
+/* Menu */
+/*------*/
+.menu{
+  display: inline-block;
+  width: 100%;
+  max-width: 341px;
+  box-sizing: border-box;
+  background: $blue;
+  color: $white;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.5);
+  padding: 20px 26px 28px;
+
+  @include sp{
+    display: block;
+    margin: 0 auto;
+  }
+
+  a{
+    color: $white;
+    text-decoration: none;
+
+    &:hover{
+      opacity: .8;
+    }
+
+  }
+
+  &__Link{
+
+    &--en, &--ja{
+      display: block;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &--en{
+      font-size: 18px;
+      font-family: $lato;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    &--ja{
+      font-family: $noto-serif;
+      font-size: 12px;
+    }
+
+  }
+
+  &__topArea{
+    display: flex;
+    flex-wrap: wrap;
+
+    a{
+      width: 50%;
+      padding: 18px 0 24px;
+      border-bottom: 1px solid rgba(244, 244, 244, .2);
+
+      span:first-child{
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__middleArea{
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(244, 244, 244, .2);
+
+    a{
+      display: block;
+      padding: 10px 0;
+
+      > span{
+        font-size: 15px;
+      }
+
+    }
+  }
+
+  &__bottomArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 0;
+
+    a{
+
+      > span{
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__sns{
+    font-size: 0;
+
+    a{
+      display: inline-block;
+
+      &:not(:last-child){
+        margin-right: 14px;
+      }
+
+    }
+
+  }
+
+}
+
+
+/*-------------*/
+/* Menu Button */
+/*-------------*/
+.menuBtn{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 64px;
+  background-color: $blue;
+  margin-left: 1px;
+  text-decoration: none;
+
+  &:hover{
+    opacity: .8;
+  }
+
+  span{
+    font-family: $hiragino-gothic;
+    font-size: 9px;
+    color: $white;
+    margin-top: 6px;
+  }
+
+  &Wrap{
+    display: flex;
+
+    @include sp{
+      justify-content: center;
+    }
+
+  }
+
+}
+
+
+/*-----------*/
+/* Post List */
+/*-----------*/
+.postList{
+  display: flex;
+  width: 100%;
+  max-width: 576px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  text-decoration: none;
+
+  &:hover{
+    opacity: .8;
+  }
+
+  @include sp{
+    display: block;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  &__img{
+    width: 189px;
+    height: 118px;
+    margin-right: 23.2px;
+
+    @include sp{
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    img{
+      width: 100%;
+    }
+
+  }
+
+  &__info{
+    font-size: 0;
+    flex: 1;
+
+    &Cat{
+      margin-right: 36px;
+      font-family: $lato;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: $blue;
+
+      @include sp{
+        font-size: 14px;
+        margin-right: 14px;
+      }
+
+    }
+
+    &Date{
+      font-family: $lato;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      color: $blue;
+
+      @include sp{
+        font-size: 14px;
+      }
+
+    }
+
+    &Title{
+      margin-top: 12px;
+      margin-bottom: 16px;
+      font-family: $noto-serif;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+      height: 1.5em;
+      color: $black;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 1;
+
+      @include sp{
+        font-size: 14px;
+        height: 3em;
+        -webkit-line-clamp: 2;
+      }
+
+    }
+
+    &Content{
+      font-family: $yu-gothic;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+      height: 4.5em;
+      color: $light-gray;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+
+      @include sp{
+        display: none;
+      }
+
+    }
+
+  }
+
+}
