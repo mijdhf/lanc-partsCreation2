@@ -1,8 +1,7 @@
 /* 3
 ---------------------------------------------------*/
 .mediatorwrap{
-  display: flex;
-  justify-content: center;
+    @include flex($type:center);
   margin-top: 36px;
   @include media(sp){
     display: block;
