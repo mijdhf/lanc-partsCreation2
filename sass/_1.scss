@@ -1,2 +1,28 @@
 /* 1
 ---------------------------------------------------*/
+.article{
+   max-width: 724px;
+   margin-top: 29.5px;
+   margin-left: 38px;
+   margin-right: 38px;
+    &__line{
+    display: flex;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-bottom:1px solid $light-gray;
+    &Date{
+    width: 73px;
+    font-family: 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    margin-right: 54px;
+   }
+   &Text{
+     font-family: 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+
+   }
+  }
+}
