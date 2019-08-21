@@ -1,6 +1,17 @@
 /* 8
 ---------------------------------------------------*/
 .data{
+  margin-top: 41.3px;
+  margin-left: 13.6px;
+  @include media(sp){
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding: 19px 30px;
+    @include media(sp){
+  background-color: #f8f8f8;
+}
+  }
   &__title{
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -22,9 +33,10 @@
      margin-top: 18px;
      padding-top: 12.2px;
      padding-bottom: 12.2px;
-     max-width: 868px;
+     max-width: 924px;
      border-top: 1px solid rgba(0, 0, 0, .2);
      border-bottom: 1px solid rgba(0, 0, 0, .2);
+
 
      &-head{
        font-family:  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
@@ -33,9 +45,10 @@
       letter-spacing: 0.05em;
       line-height: 150%;
       color: #454545;
-      padding-left: 7.4px;
-      min-width: 7em;
+      padding-left: 23.8px;
+      min-width: 9em;
       max-width: 88px;
+
      }
 
      &-info{
@@ -46,13 +59,21 @@
         letter-spacing: 0.05em;
         line-height: 150%;
         color: #454545;
+        @include media(sp){
+        padding-left: 30px;
+      }
 
      }
  }
 
-
   &__table{
     display: flex;
+     border-bottom: 1px solid rgba(0, 0, 0, .2);
+     max-width: 924px;
+     @include media(sp){
+       display: block;
+     }
+
   }
    &__row{
      display: flex;
@@ -62,24 +83,43 @@
      letter-spacing: 0.05em;
      line-height: 150%;
      color: #454545;
-     margin-top: 12.2px;
-     padding-bottom: 12.2px;
      border-bottom: 1px solid rgba(0, 0, 0, .2);
 
+     &:last-child{
+       @include media(sp){
+       border-bottom: 0px;
+      }
+     }
 
-   @include media(sp){
-    display: block;
-   }
+
+
       &-head{
       display: flex;
-      min-width: 7em;
+      min-width: 9em;
       max-width: 88px;
-      padding-left: 7.4px;
+      padding-left: 23.8px;
+      padding-top:12.2px;
+      padding-bottom:12.2px;
             }
+
       &-info{
       width: 336px;
       padding-left: 62px;
-              }
+      padding-top:12.2px;
+      padding-bottom:12.2px;
+      @include media(sp){
+      padding-left: 10px;
+      background-color: #fff;
+          }
+        }
+ }
+ &-left{
+   >div:last-child{
+     border-bottom: 0px;
+     @include media(sp){
+     border-bottom: 1px solid rgba(0, 0, 0, .2);
+     }
+   }
  }
 
 }

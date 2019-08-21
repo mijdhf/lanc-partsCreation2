@@ -6,11 +6,17 @@
   @include media(sp){
     display: block;
     text-align: center;
+    margin-right: 27px;
+    margin-left: 27px;
   }
 .mediator{
   margin-right: 27px;
   margin-left: 27px;
   text-align: center;
+    @include media(sp){
+      margin-right: 0px;
+      margin-left: 0px;
+    }
 &__img1{
   width: 575px;
   height: 185px;
@@ -54,6 +60,9 @@
   }
 &__img2{
   width: 76px;
+  @include media(sp){
+    display: none;
+  }
   }
 
 &__img3{

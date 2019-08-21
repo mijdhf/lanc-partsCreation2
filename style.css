@@ -73,18 +73,29 @@ a:hover { opacity: .6; }
 /* 3
 ---------------------------------------------------*/
 .mediatorwrap { justify-content: center; display: flex; flex-wrap: wrap; width: auto; height: auto; margin-top: 36px; }
-@media only screen and (max-width: 767px) { .mediatorwrap { display: block; text-align: center; } }
+@media only screen and (max-width: 767px) { .mediatorwrap { display: block; text-align: center; margin-right: 27px; margin-left: 27px; } }
 .mediatorwrap .mediator { margin-right: 27px; margin-left: 27px; text-align: center; }
+@media only screen and (max-width: 767px) { .mediatorwrap .mediator { margin-right: 0px; margin-left: 0px; } }
 .mediatorwrap .mediator__img1 { width: 575px; height: 185px; object-fit: contain; margin-bottom: 29px; }
 @media only screen and (max-width: 767px) { .mediatorwrap .mediator__img1 { margin-bottom: 45.1px; max-width: 350px; height: auto; } }
 .mediatorwrap .mediator__title { font-family: "Noto Serif JP", serif; font-weight: bold; font-size: 14px; text-align: center; color: #005aa0; }
 .mediatorwrap .mediator__title-main { font-family: "Noto Serif JP", serif; font-weight: normal; font-size: 26px; letter-spacing: 0.2em; text-align: center; color: #005aa0; margin-top: 6px; }
 .mediatorwrap .mediator__content { font-family: "Noto Serif JP", serif; font-weight: normal; font-size: 13.98px; letter-spacing: 0.2em; line-height: 150%; text-align: center; color: #454545; margin-top: 20px; margin-bottom: 24.9px; }
 .mediatorwrap .mediator__img2 { width: 76px; }
+@media only screen and (max-width: 767px) { .mediatorwrap .mediator__img2 { display: none; } }
 .mediatorwrap .mediator__img3 { width: 9px; height: 9px; }
 
 /* 4
 ---------------------------------------------------*/
+.illust { background-color: #F8F8F8; justify-content: center; display: flex; flex-wrap: wrap; width: auto; height: auto; }
+@media only screen and (max-width: 767px) { .illust { padding: 30px 0px; } }
+.illust__detail { width: 291px; height: 400px; margin-left: 35px; margin-right: 35px; }
+.illust__detail-circle { position: relative; width: 206px; height: 206px; margin: auto; background-color: #fff; border-radius: 50%; z-index: 1; margin-bottom: 33.1px; }
+.illust__detail-circle-i2 { width: 16px; height: 34px; position: absolute; top: 15%; left: 45%; z-index: 2; }
+.illust__detail-circle-i3 { width: 88.19px; height: 76.25px; position: absolute; top: 40%; left: 30%; z-index: 3; }
+.illust__title { font-family: 'Noto Serif JP', serif; font-size: 17px; letter-spacing: 0.2em; line-height: 150%; text-align: center; margin-bottom: 25.6px; color: #005aa0; }
+.illust__content { font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.05em; line-height: 150%; color: #454545; }
+
 /* 5
 ---------------------------------------------------*/
 .flow { justify-content: center; display: flex; flex-wrap: wrap; width: auto; height: auto; max-width: 1400px; margin: auto; }
@@ -123,13 +134,22 @@ a:hover { opacity: .6; }
 
 /* 8
 ---------------------------------------------------*/
+.data { margin-top: 41.3px; margin-left: 13.6px; }
+@media only screen and (max-width: 767px) { .data { margin-top: 0px; margin-left: 0px; margin-bottom: 0px; padding: 19px 30px; } }
+@media only screen and (max-width: 767px) and (max-width: 767px) { .data { background-color: #f8f8f8; } }
+
 .data__title { font-family: 'Lato', sans-serif; font-weight: bold; font-size: 18px; letter-spacing: 0.2em; line-height: 150%; color: #454545; margin-right: 36.5px; }
 .data__sub { font-family: 'Noto Serif JP', serif; font-size: 12px; letter-spacing: 0.2em; line-height: 150%; text-align: center; color: #505050; }
-.data__building { margin-top: 18px; padding-top: 12.2px; padding-bottom: 12.2px; max-width: 868px; border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
-.data__building-head { font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0.05em; line-height: 150%; color: #454545; padding-left: 7.4px; min-width: 7em; max-width: 88px; }
+.data__building { margin-top: 18px; padding-top: 12.2px; padding-bottom: 12.2px; max-width: 924px; border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+.data__building-head { font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0.05em; line-height: 150%; color: #454545; padding-left: 23.8px; min-width: 9em; max-width: 88px; }
 .data__building-info { padding-left: 62px; font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 17px; letter-spacing: 0.05em; line-height: 150%; color: #454545; }
-.data__table { display: flex; }
-.data__row { display: flex; font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0.05em; line-height: 150%; color: #454545; margin-top: 12.2px; padding-bottom: 12.2px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
-@media only screen and (max-width: 767px) { .data__row { display: block; } }
-.data__row-head { display: flex; min-width: 7em; max-width: 88px; padding-left: 7.4px; }
-.data__row-info { width: 336px; padding-left: 62px; }
+@media only screen and (max-width: 767px) { .data__building-info { padding-left: 30px; } }
+.data__table { display: flex; border-bottom: 1px solid rgba(0, 0, 0, 0.2); max-width: 924px; }
+@media only screen and (max-width: 767px) { .data__table { display: block; } }
+.data__row { display: flex; font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0.05em; line-height: 150%; color: #454545; border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+@media only screen and (max-width: 767px) { .data__row:last-child { border-bottom: 0px; } }
+.data__row-head { display: flex; min-width: 9em; max-width: 88px; padding-left: 23.8px; padding-top: 12.2px; padding-bottom: 12.2px; }
+.data__row-info { width: 336px; padding-left: 62px; padding-top: 12.2px; padding-bottom: 12.2px; }
+@media only screen and (max-width: 767px) { .data__row-info { padding-left: 10px; background-color: #fff; } }
+.data-left > div:last-child { border-bottom: 0px; }
+@media only screen and (max-width: 767px) { .data-left > div:last-child { border-bottom: 1px solid rgba(0, 0, 0, 0.2); } }

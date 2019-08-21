@@ -1,2 +1,66 @@
 /* 4
 ---------------------------------------------------*/
+
+
+.illust{
+  background-color: #F8F8F8;
+      @include flex($type:center);
+      @include media(sp){
+        padding:30px 0px ;
+      }
+
+&__detail{
+  width: 291px;
+  height: 400px;
+  margin-left: 35px;
+  margin-right:35px;
+}
+      &__detail-circle{
+      position: relative;
+      width: 206px;
+      height: 206px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 1;
+      margin-bottom: 33.1px;
+
+
+  &-i2{
+    width: 16px;
+    height: 34px;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    z-index: 2;
+  }
+  &-i3{
+    width:88.19px;
+    height: 76.25px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    z-index: 3;
+  }}
+
+
+&__title{
+  font-family:  'Noto Serif JP', serif;
+  font-size: 17px;
+  letter-spacing: 0.2em;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 25.6px;
+  color: #005aa0;
+   }
+
+   &__content{
+     font-family:  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+     font-weight: 500;
+     font-size: 13px;
+     letter-spacing: 0.05em;;
+     line-height: 150%;
+     color: #454545;
+          }
+
+}
