@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   margin-top: 36px;
+  @include media(sp){
+    display: block;
+    text-align: center;
+  }
 .mediator{
   margin-right: 27px;
   margin-left: 27px;
@@ -13,6 +17,11 @@
   height: 185px;
   object-fit: contain;
   margin-bottom: 29px;
+  @include media(sp){
+    margin-bottom: 45.1px;
+    max-width:350px;
+    height: auto;
+  }
   }
 &__title{
   font-family: "Noto Serif JP", serif;

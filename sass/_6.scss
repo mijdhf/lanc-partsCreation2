@@ -1,2 +1,70 @@
 /* 6
 ---------------------------------------------------*/
+.tax{
+  margin-top: 63px;
+  margin-left: 54px;
+
+&__title{
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: #005aa0;
+  margin-bottom: 13.7px;
+
+}
+&__content{
+  width: 650px;
+  height: 54.32px;
+  font-family:  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  line-height: 150%;
+  color: #454545;
+  margin-bottom: 8.5px;
+}
+
+&__price{
+    font-family:  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    line-height:150%;
+    color: #838383;
+    margin-bottom: 6.5px;
+  &-head{
+    width: 194px;
+    margin-right: 95px;
+
+  }
+}
+
+&__row{
+    display: flex;
+    width: 317px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 0px;
+
+    &-head{
+      padding-top:6px;
+      padding-bottom: 6px;
+      padding-left: 14px;
+      width: 194px;
+      font-size: 13px;
+      font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+      border-right: 1px solid rgba(0, 0, 0, .2);
+      background-color: #EDEDEE;
+
+    }
+    &-info{
+      padding-top:6px;
+      padding-bottom: 6px;
+      padding-left: 14px;
+      font-size: 13px;
+      font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    }
+    &:last-of-type{
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+}
+}
